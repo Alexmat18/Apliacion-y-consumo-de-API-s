@@ -1,3 +1,8 @@
+#Los estudiantes desarrollarán una aplicación con interfaz gráfica que permita 
+# mostrar por pantalla la hora, la fecha, la temperatura, el clima, la velocidad 
+# del viento. También debe contar con un botón que al momento de presionarlo, 
+# muestre una alerta con un dato al azar sobre gatos, o puede ser también un consejo.#
+
 import requests
 from customtkinter import *
 import customtkinter
