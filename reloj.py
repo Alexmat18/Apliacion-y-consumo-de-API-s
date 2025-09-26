@@ -3,9 +3,11 @@
 # del viento. También debe contar con un botón que al momento de presionarlo, 
 # muestre una alerta con un dato al azar sobre gatos, o puede ser también un consejo.#
 
-import requests
-from customtkinter import *
-import customtkinter
+import requests#libreria para hacer peticiones a una API
+from customtkinter import *#
+import customtkinter#interfaz grafica
+from datetime import date# libreria para fechas y horas
+
 app = CTk()
 app.title("Reloj Nacional")
 app.resizable(False, False)
@@ -15,7 +17,10 @@ fontm=mi_fuente
 etiqueta1 = CTkLabel(app, text="", font=fontm)
 etiqueta1.grid(row=0, column=0, padx=5, pady=5)
 
-
+#fecha Hoy
+FechaHoy = date.today()
+etiqueta2 = CTkLabel(app, text=f"Fecha: {FechaHoy}", font=fontm)
+etiqueta2.grid(row=1, column=0, padx=5, pady=5)
 # Función para actualizar la hora
 def actualizar_reloj():
     url = "https://timeapi.io/api/time/current/zone?timeZone=America%2FGuatemala"
