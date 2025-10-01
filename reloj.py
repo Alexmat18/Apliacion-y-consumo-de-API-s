@@ -8,6 +8,8 @@ from customtkinter import *#
 import customtkinter#interfaz grafica
 from datetime import date# libreria para fechas y 
 from tkinter import messagebox#libreria para mostrar mensajes emergentes
+from PIL import Image
+import io
 import random#libreria para generar numeros aleatorios
 # FUCNCIONES
 # Función para actualizar la hora
@@ -55,18 +57,18 @@ mi_fuente = customtkinter.CTkFont(family="Arial", size=25)
 fontm=mi_fuente
 # etiqueta para mostrar la hora
 etiqueta1 = CTkLabel(app, text="", font=fontm)
-etiqueta1.grid(row=0, column=0, padx=5, pady=5)
+etiqueta1.grid(row=0, column=0, padx=5, pady=5, columnspan=1)
 
 # fecha Hoy y etiqueta para mostrarla
 FechaHoy = date.today()
 etiqueta2 = CTkLabel(app, text=f"Fecha: {FechaHoy}", font=fontm)
-etiqueta2.grid(row=1, column=0, padx=5, pady=5)
+etiqueta2.grid(row=1, column=0, padx=5, pady=5,columnspan=1)
 # etiqueta para mostrar el clima
 etiqueta3 = CTkLabel(app, text="", font=fontm)
-etiqueta3.grid(row=2, column=0, padx=5, pady=5)
+etiqueta3.grid(row=2, column=0, padx=5, pady=5,columnspan=1)
 # Botón para mostrar un consejo
 boton1 = CTkButton(app, text="Mostrar consejo", font=fontm, command=consejo)
-boton1.grid(row=3, column=0, padx=5, pady=5)
+boton1.grid(row=3, column=0, padx=2, pady=5)
 boton2=CTkButton(app, text="Salir",font=fontm, command=cerrar)
 boton2.grid(row=3, column=1)
 actualizar_reloj()
